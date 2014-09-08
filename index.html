@@ -5,22 +5,18 @@
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<!-- extra style --> 
 <style type="text/css">
 #container { margin-left: auto; margin-right: auto; width: 400px;}
 </style>
 </head>
 <body>
-<!-- where the content will go --> 
-
 <div id="container"></div>
-<h1>WAT</h1>
-<div id="groups"> 
-</div>
+<h1>TEST</h1>
+<div id="groups"></div>
 </body>
  <script type="text/javascript">
     $(document).ready(function(){
-    $.getJSON("https://api.meetup.com/2/groups?callback=?&sign=true&member_id=52464492&page=20&api&key=3f5816c3734b5b496e381b1221&only=name,link", 
+    $.getJSON("https://api.meetup.com/2/groups?callback=?&sign=true&member_id=8377069&page=20&api&key=3f5816c3734b5b496e381b1221&only=name,link", 
 function (data) {
     var htmlString = "";
     $.each(data.results, function (i, item) {
