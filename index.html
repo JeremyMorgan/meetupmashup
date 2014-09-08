@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<!-- extra style --> 
+<style type="text/css">
+#container { margin-left: auto; margin-right: auto; width: 400px;}
+</style>
+</head>
+<body>
+<!-- where the content will go --> 
+<div id="container"></div>
+
+</body>
+<script>
+
+$(document).ready(function () {
+    $.ajax({ 
+        type: 'GET', 
+        url: 'http://api.meetup.com/find/groups?desc=programming&photo-host=public&zip=97201&page=20&sig_id=52464492&radius=30&category=34&sig=e49f410458cee63063f794e29b2c01b48492f5a8', 
+        data: { get_param: 'value' }, 
+        success: function (data) { 
+         for (var i=0;i<data.length;++i)
+         {
+         $('#cand').append('<div class="name">data[i].name</>');
+         }
+        }
+    });
+});
+
+</script>
+</html>
