@@ -23,7 +23,7 @@
 <script>
 
  $(document).ready(function(){
-    $.getJSON("http://api.meetup.com/find/groups?desc=programming&photo-host=public&zip=97201&page=20&sig_id=52464492&radius=30&category=34&sig=e49f410458cee63063f794e29b2c01b48492f5a8", 
+    $.getJSON("https://api.meetup.com/2/groups?callback=?&sign=true&member_id=8377069&page=20&api&key=3f5816c3734b5b496e381b1221&only=name,link", 
 function (data) {
     var htmlString = "";
     $.each(data.results, function (i, item) {
@@ -31,6 +31,7 @@ function (data) {
     });
     $('#groups').html(htmlString);});
     });
+    </script>
     </script>
 
 </html>
