@@ -23,9 +23,8 @@
 <script>
 
  $(document).ready(function(){
-    $.getJSON("https://api.meetup.com/2/groups?callback=?&sign=true&page=20&zip=97201&category=34&radius=30&api&key=3f5816c3734b5b496e381b1221&only=name,link", 
+    $.getJSON("https://api.meetup.com/2/groups?callback=?&sign=true&page=20&zip=97201&photo-host=public&category=34&radius=30&api&key=3f5816c3734b5b496e381b1221&only=name,link", 
 
-        //&photo-host=public&zip=97201&category=34&radius=30&page=20&desc=programming
 function (data) {
     var htmlString = "";
     $.each(data.results, function (i, item) {
