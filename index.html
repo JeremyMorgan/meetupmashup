@@ -20,7 +20,7 @@
 
 $(document).ready(function(){ 
 //$.getJSON("http://api.meetup.com/2/open_events.json?zip=10001&radius=7&topic=technology&status=upcoming&time=,1w&key=APIKEY&callback=?", 
-$.getJSON("http://api.meetup.com/find/groups?desc=programming&photo-host=public&zip=97201&page=20&sig_id=52464492&radius=30&category=34&sig=e49f410458cee63063f794e29b2c01b48492f5a8&key=3f5816c3734b5b496e381b1221&callback=?",
+$.getJSON("http://api.meetup.com/find/groups?desc=programming&photo-host=public&zip=97201&page=20&sig_id=52464492&radius=30&category=34&sig=e49f410458cee63063f794e29b2c01b48492f5a8&sign=true&key=3f5816c3734b5b496e381b1221",
     function (data) { 
 var htmlString = ""; 
 $.each(data.results, function (i, item) {
