@@ -22,18 +22,15 @@
 </body>
 <script>
 
-$(document).ready(function () {
-    $.ajax({ 
-        type: 'GET', 
-        url: 'http://api.meetup.com/find/groups?desc=programming&photo-host=public&zip=97201&page=20&sig_id=52464492&radius=30&category=34&sig=e49f410458cee63063f794e29b2c01b48492f5a8', 
-        data: { get_param: 'value' }, 
-        success: function (data) { 
-         for (var i=0;i<data.length;++i)
-         {
-         $('#cand').append('<div class="name">data[i].name</>');
-         }
-        }
+ $(document).ready(function(){
+    $.getJSON("http://api.meetup.com/find/groups?desc=programming&photo-host=public&zip=97201&page=20&sig_id=52464492&radius=30&category=34&sig=e49f410458cee63063f794e29b2c01b48492f5a8,link", 
+function (data) {
+    var htmlString = "";
+    $.each(data.results, function (i, item) {
+        htmlString += '<h3><a href="' + item.link + '" target="_blank">' + item.name + '</a></h3>';
     });
-});
-</script>
+    $('#groups').html(htmlString);});
+    });
+    </script>
+
 </html>
