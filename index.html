@@ -17,20 +17,14 @@
 <div id="container"></div>
 </body>
 <script>
-
 $(document).ready(function () {
-    $.ajax({ 
-        type: 'GET', 
-        url: 'http://api.meetup.com/find/groups?desc=programming&photo-host=public&zip=97201&page=20&sig_id=52464492&radius=30&category=34&sig=e49f410458cee63063f794e29b2c01b48492f5a8', 
-        data: { get_param: 'value' }, 
-        success: function (data) { 
-         for (var i=0;i<data.length;++i)
-         {
-         $('#cand').append('<div class="name">data[i].name</>');
-         }
-        }
+$.getJSON("http://api.meetup.com/find/groups?desc=programming&photo-host=public&zip=97201&page=20&sig_id=52464492&radius=30&category=34&sig=e49f410458cee63063f794e29b2c01b48492f5a8",function(result){
+  $.each(result, function(i, field){
+    $("div").append(field + " ");
+      });
     });
 });
+
 
 </script>
 </html>
