@@ -14,7 +14,7 @@
 <!-- where the content will go --> 
 <h1>WAT</h1>
 
-<div id="images">
+<div id="groups">
  
 </div>
 
@@ -27,15 +27,15 @@ $(document).ready(function(){
     //url: "http://api.meetup.com/find/groups?desc=programming&photo-host=public&zip=97201&page=20&sig_id=52464492&radius=30&category=34&sig=e49f410458cee63063f794e29b2c01b48492f5a8&sign=true&key=3f5816c3734b5b496e381b1221",
  
 
- $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+ $.getJSON("http://api.meetup.com/find/groups?desc=programming&photo-host=public&zip=97201&page=20&sig_id=52464492&radius=30&category=34&sig=e49f410458cee63063f794e29b2c01b48492f5a8&sign=true&key=3f5816c3734b5b496e381b1221&jsoncallback=?",
   {
-    tags: "jquery",
+    //tags: "jquery",
     tagmode: "any",
     format: "json"
   },
   function(data) {
     $.each(data.items, function(i,item){
-      $("<img />").attr("src", item.media.m).appendTo("#images");
+      $("<img />").attr("src", item.media.m).appendTo("#groups");
       if ( i == 3 ) return false;
     });
   });
