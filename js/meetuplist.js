@@ -15,7 +15,7 @@
             // do nothing.
     }
 
-        htmlString += '<div class="col-sm-4 col-lg-4 col-md-4"> <div class="thumbnail"> <img src="' + picture + '" alt="TEST" height="150" width="320"> <div class="caption"><h4><a href="' + item.link + '" target="_blank">' + item.name + '</a></h4> ' + item.description + ' </div> <div class="ratings"> <p class="pull-right">18 reviews</p> <p> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star-empty"></span> </p> </div> </div> </div>';
+        htmlString += '<div class="col-sm-4 col-lg-4 col-md-4"> <div class="thumbnail"> <img src="' + picture + '" alt="' + item.name + '" height="150" width="320"> <div class="caption"><h4><a href="' + item.link + '" target="_blank">' + item.name + '</a></h4> ' + item.description + ' </div><div class="ratings"><p><a href="' + item.link + 'join/" target="_blank">Join this group</a> ' + item.members + ' Members</p> <p></p> </div> </div> </div>';
         //htmlString += '<img src="' + item.group_photo + '"><a href="' + item.link + '" target="_blank">' + item.name + '</a></img>';
         console.log(htmlString);
         });
